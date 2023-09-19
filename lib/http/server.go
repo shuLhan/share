@@ -272,6 +272,9 @@ func (srv *Server) registerPut(ep *Endpoint) (err error) {
 
 // ServeHTTP handle mapping of client request to registered endpoints.
 func (srv *Server) ServeHTTP(res http.ResponseWriter, req *http.Request) {
+	//log.Println(`REQUEST:`)
+	//req.Write(log.Writer())
+
 	switch req.Method {
 	case http.MethodDelete:
 		srv.handleDelete(res, req)
@@ -301,6 +304,9 @@ func (srv *Server) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 		res.WriteHeader(http.StatusNotImplemented)
 		return
 	}
+	//log.Println("RESPONSE:")
+	//res.Header().Write(log.Writer())
+	//log.Println()
 }
 
 // Start the HTTP server.
