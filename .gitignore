@@ -22,6 +22,7 @@
 /_bin/hexo
 /_bin/httpdfs
 /_bin/ini
+/_bin/mimeunquote
 /_bin/sendemail
 /_bin/smtpcli
 /_bin/totp
